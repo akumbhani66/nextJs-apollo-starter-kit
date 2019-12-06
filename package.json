@@ -1,0 +1,111 @@
+{
+  "name": "next-graphql-boilerplate",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "deploy": "next build && NODE_ENV=production node server.js",
+    "lint": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "apollo-boost": "0.1.17",
+    "compression": "^1.7.3",
+    "decode-html": "^2.0.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.16.4",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^7.0.2",
+    "nprogress": "^0.2.0",
+    "polished": "^2.3.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-apollo": "^2.1.11",
+    "react-dom": "^16.5.2",
+    "react-fontawesome": "^1.6.1",
+    "react-ga": "^2.5.7",
+    "react-paginate": "^6.2.1",
+    "react-scroll": "^1.7.10",
+    "react-select": "^2.3.0",
+    "react-string-replace": "^0.4.1",
+    "react-youtube": "^7.8.0",
+    "sharethis-reactjs": "^1.5.0",
+    "styled-components": "^4.0.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "//": "This is out babel config, I prefer this over a .babelrc file",
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "test": {
+        "presets": [
+          [
+            "next/babel",
+            {
+              "preset-env": {
+                "modules": "commonjs"
+              }
+            }
+          ]
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.0.7"
+  }
+}
