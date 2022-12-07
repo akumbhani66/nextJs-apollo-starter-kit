@@ -21,7 +21,7 @@
     "compression": "^1.7.3",
     "decode-html": "^2.0.0",
     "dotenv": "^8.1.0",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "isomorphic-unfetch": "^3.0.0",
